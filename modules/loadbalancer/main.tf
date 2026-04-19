@@ -29,10 +29,10 @@ resource "azurerm_lb_backend_address_pool" "bepool" {
 
 
 resource "azurerm_lb_probe" "probe" {
-  name                = "http-probe"
-  loadbalancer_id     = azurerm_lb.lb.id
-  protocol            = "Tcp"
-  port                = 80
+  name            = "http-probe"
+  loadbalancer_id = azurerm_lb.lb.id
+  protocol        = "Tcp"
+  port            = 80
 
   depends_on = [
     azurerm_lb.lb
