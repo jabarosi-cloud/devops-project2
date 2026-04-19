@@ -3,7 +3,7 @@ name: Terraform Plan
 on: 
   push:
     branches: 
-      - main
+      - devops-project2
   pull_request:
 
 permissions:
