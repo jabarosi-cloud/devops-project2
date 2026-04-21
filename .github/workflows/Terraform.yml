@@ -3,14 +3,14 @@ name: Terraform Plan
 on: 
   pull_request:
     branches: 
-      - main
+      - devops-project2
 
 permissions:
   contents: read
   pull-requests: write
 
 jobs:
-  Terraform:
+  terraform:
     name: Terraform Plan
     runs-on: ubuntu-latest
     
