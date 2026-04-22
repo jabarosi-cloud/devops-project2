@@ -1,10 +1,9 @@
 name: Terraform Plan
 
 on: 
-  push:
+  pull_request:
     branches: 
       - devops-project2
-  pull_request:
 
 permissions:
   contents: read
@@ -20,7 +19,6 @@ jobs:
       ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
       ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
       ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-      ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
 
     steps:
       - name: Checkout
@@ -28,6 +26,8 @@ jobs:
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.7.0
 
       - name: Terraform Init
         run: terraform init
