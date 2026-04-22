@@ -64,4 +64,4 @@ jobs:
         if: steps.plan.outcome == 'failure'
         run: exit 1
 
-#feature branch new created - feature/ci
+#feature branch created  - feature/ci
