@@ -12,6 +12,8 @@ jobs:
   terraform:
     name: Terraform apply
     runs-on: ubuntu-latest
+
+    environment: production
     
     env:
       ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
