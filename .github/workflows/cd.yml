@@ -13,6 +13,7 @@ jobs:
     name: Terraform apply
     runs-on: ubuntu-latest
 
+    #reviewer added on git for deploy
     environment: production
     
     env:
@@ -38,3 +39,5 @@ jobs:
 
       - name: output
         run: terraform output
+
+        
